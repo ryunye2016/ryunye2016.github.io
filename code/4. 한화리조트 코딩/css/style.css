@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,700&display=swap');
+@font-face {
+    font-family: 'cruell';
+    src: url('../fonts/cruell-demo.regular.otf') format('truetype');
+}
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline:none;}
+a:focus {outline:none}
+img {vertical-align: middle;}
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif;}
+.wrap {width: 100%; margin: 0 auto; overflow: hidden; background: #080113; }
+
+header {background: url(../img/gerardo-mr-pQrXggKVvzI-unsplash2.jpg)no-repeat left 0px top 0px/cover; height: 900px;}
+header .innerHeader ul {width: 80%; display: flex; justify-content: space-between; color: #fff; margin: 0 auto; padding-top: 75px; font-size: 18px;}
+header .innerHeader h1 {text-align: center; margin-top: 300px; color: #fff; font-size: 50px; font-family: 'Playfair Display', serif; font-weight: bold;}
+header .innerHeader p {text-align: center; margin-top: 280px; color: #fff;}
+
+.visual {width: 100%;}
+.visual p.logo {width: 70px; margin: 100px auto; }
+.visual p.logo img {width: 100%;}
+.visual .horizon {color: #fff; position: relative; }
+.visual .horizon .story {margin-left: 500px; font-size: 24px; font-weight: 100;}
+.visual .horizon .width {width: 70%; height: 1px; background-color: #fff; position: absolute; left: 720px; top:19px;}
+.visual .image1 {float: right; margin-top: 100px; width: 1200px; height: 678px;}
+.visual .image1 img {width: 100%;}
+.visual .image2 {float:left; width: 1400px; height: 678px; margin-top: 30px;}
+.visual .image2 img {width: 100%; }
+.visual .image3 {width: 188px; height: 31px; margin-left: 1212px; margin-top: 100px;}
+.visual .image3 img {width: 100%;}
+.visual .txt {color: #fff; margin-top: 1000px; margin-left: 656px;}
+.visual .txt h1 {font-family: 'Playfair Display', serif; font-weight: bold; font-size: 64px;}
+.visual .txt p {font-size: 32px; font-weight: 100; margin-top: 50px;}
+
+.event h1 {color: #fff; width: 100%; display: block; margin-top: 1000px; text-align: center; font-size: 48px;}
+.event ul {width: 1600px; margin: 70px auto; display: flex; justify-content: space-between; color: #fff;}
+.event ul li {border-right: 1px solid #9B9B9B; margin-right: 30px; padding-right: 30px;}
+.event ul li:nth-child(3) {border:none;}
+.event ul li h3 {font-size: 32px;}
+.event ul li p {font-size: 24px; margin-top: 30px; line-height: 40px; font-weight: 100;}
+.event ul li .date {font-size: 20px; color: #A8A8A8; margin-bottom: 50px;}
+.event ul li a {width: 50%;}
+.event ul li img {width: 500px;}
+
+.promotion {width: 100%;}
+.promotion h1 {font-size: 48px; color: #fff; text-align: center; margin-top: 150px;}
+.promotion iframe {margin: 74px auto; display: block;}
+
+.instagram {width: 1600px; margin:0 auto; display: block;}
+.instagram h1 {font-size: 48px; color: #fff; text-align: center; margin-top: 70px;}
+.instagram p {font-size: 24px; color: #fff; text-align: center; margin: 20px 0; font-weight: 100;}
+.instagram ul {width: 100%; display: flex; justify-content: space-between;}
+.instagram ul li {width: 33.3333%; margin-left: 20px; margin-top: 20px; margin-bottom: 50px; display: block; overflow: hidden;}
+.instagram ul li:nth-child(1) {margin-left: 0px; }
+.instagram ul li img {width: 100%;transition: all 0.4s;  }
+
+footer {background: #000; width: 100%; height: 400px; padding: 100px; margin-top: 100px;}
+footer .wrap {width: 1600px; margin:0 auto; color: #fff;  font-size: 20px; background: #000;}
+footer ul {display: flex; justify-content: space-between; margin-bottom: 95px;}
+footer p {line-height: 30px; color:#9B9B9B}
+
+
+/* hover animation */
+.instagram ul li img:hover {transform: scale(1.2);}
+
+/* image animation */
+@keyframes imgAni {
+    0% {transform: translateY(50px); }
+}
+
+@keyframes mask {
+    0% {height: 90%;}
+}
+
+.image1.motion {position: relative; animation-name: imgAni; animation-duration: 1s;}
+.image1.motion:after {content: ''; width: 100%; height: 0; background: #080113; position: absolute; top: 0; left: 0; animation-name: mask; animation-duration: 1.2s; }
+.image2.motion {position: relative; animation-name: imgAni; animation-duration: 1s;}
+.image2.motion:after {content: ''; width: 100%; height: 0; background: #080113; position: absolute; top: 0; left: 0; animation-name: mask; animation-duration: 1.2s; }

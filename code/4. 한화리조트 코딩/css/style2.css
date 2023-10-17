@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,700&display=swap');
+@font-face {
+    font-family: 'cruell';
+    src: url('../fonts/cruell-demo.regular.otf') format('truetype');
+}
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline:none;}
+a:focus {outline:none}
+img {vertical-align: middle;}
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif; }
+.wrap {width: 100%; margin: 0 auto; overflow: hidden; background: #080113; }
+
+header {background: url(../img/gerardo-mr-pQrXggKVvzI-unsplash2.jpg)no-repeat left 0px top 0px/cover; height: 900px;}
+header .innerHeader ul {width: 80%; display: flex; justify-content: space-between; color: #fff; margin: 0 auto; padding-top: 75px; font-size: 18px;}
+header .innerHeader h1 {text-align: center; margin-top: 300px; color: #fff; font-size: 50px; font-family: 'Playfair Display', serif; font-weight: bold;}
+header .innerHeader p {text-align: center; margin-top: 280px; color: #fff;}
+
+.visual .p1 {font-size: 24px; color: #fff; text-align: center; margin-top: 100px; margin-bottom: 60px;}
+.visual img {margin: 0 auto; display: block; margin-bottom: 300px;}
+.visual .p2 {color: #847F86; font-size: 96px; font-family: cruell; text-align: center; margin-bottom: 50px;}
+.visual .p3 {color: #fff; font-size: 24px; font-weight: 100; text-align: center; margin-bottom: 40px;}
+.visual .p4 {color: #fff; font-size: 24px; font-weight: 100; text-align: center; margin-bottom: 420px;}
+
+.contents {width: 100%; background: url(../img/webpage.png); padding: 350px 0; overflow: hidden;}
+.contents ul li .txtBox h1 {font-size: 64px; font-weight: 100; color: #B9B9B7; margin-bottom: 30px;}
+.contents ul li .txtBox p {font-size: 24px; font-weight: 100; margin-top: 30px; color: #fff;}
+.contents ul li .img2 {width: 22px; height: 31px;}
+.contents ul li:nth-child(1) .img {display: inline-block;}
+.contents ul li:nth-child(1) .txtBox {float: right; margin-right: 150px; margin-top: 220px;}
+.contents ul li:nth-child(2) {margin-top: 380px;}
+.contents ul li:nth-child(2) .img {float: right;}
+.contents ul li:nth-child(2) .img img {width: 100%; float: left;}
+.contents ul li:nth-child(2) .txtBox {float: left; margin-left: 100px; margin-top: 200px;}
+.contents ul li:nth-child(3) {margin-top: 1500px; margin-left: 200px;}
+.contents ul li:nth-child(3) .img {width: 733px; height: 1001px; display: inline-block;}
+.contents ul li:nth-child(3) .img img {width: 100%;}
+.contents ul li:nth-child(3) .txtBox {float: right; margin-top: 300px; margin-right: 250px;}
+.contents ul li:nth-child(4) {margin-top: 300px;}
+.contents ul li:nth-child(4) .img {width: 724px; height: 914px; float: right; margin-right: 250px;}
+.contents ul li:nth-child(4) .img img {width: 100%;}
+.contents ul li:nth-child(4) .txtBox {width: 45%; text-align: right; padding-top : 300px; padding-right: 25px;}
+
+footer {background: #000; width: 100%; height: 400px; padding: 100px;}
+footer .wrap {width: 1600px; margin:0 auto; color: #fff;  font-size: 20px; background: #000;}
+footer ul {display: flex; justify-content: space-between; margin-bottom: 95px;}
+footer p {line-height: 30px; color:#9B9B9B}
+
+
+/* img animation */
+@keyframes imgAni {
+    0% {transform: translateY(50px); }
+}
+
+@keyframes mask {
+    0% {height: 90%;}
+}
+
+.contents .img.motion {position: relative; animation-name: imgAni; animation-duration: 1s;}
+.contents .img.motion:after {content: ''; width: 100%; height: 0; background: #fff; position: absolute; top: 0; left: 0; animation-name: mask; animation-duration: 1.2s; }
+
+/* txt animation */
+@keyframes textAni {
+    0% {opacity:0;}
+    30% {opacity:0; transform: translate3d(0,40px,0) skewY(8deg); transform-origin : top left}
+}
+
+.visual .p2.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+.visual .p3.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+.visual .p4.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+.contents .txtBox.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}

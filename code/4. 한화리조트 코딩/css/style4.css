@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap');
+@font-face {
+    font-family: 'cruell';
+    src: url('../fonts/cruell-demo.regular.otf') format('truetype');
+}
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline:none;}
+a:focus {outline:none}
+img {vertical-align: middle;}
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif; }
+.wrap {width: 100%; margin: 0 auto; overflow: hidden; background: #080113; }
+
+/* header */
+header {background: url(../img/gerardo-mr-pQrXggKVvzI-unsplash2.jpg)no-repeat left 0px top 0px/cover; height: 900px;}
+header .innerHeader ul {width: 80%; display: flex; justify-content: space-between; color: #fff; margin: 0 auto; padding-top: 75px; font-size: 18px;}
+header .innerHeader h1 {text-align: center; margin-top: 300px; color: #fff; font-size: 50px; font-family: 'Playfair Display', serif; font-weight: bold;}
+header .innerHeader p {text-align: center; margin-top: 280px; color: #fff;}
+
+
+/* visual */
+.visual {color: #fff; width: 100%;}
+.visual .top h3 {font-family: 'Cruell'; font-size: 64px; text-align: center; margin-top: 128px; font-weight: normal;}
+.visual .top p {font-size: 36px; text-align: center; margin-top: 70px; font-weight: 400;}
+
+.visual .mid {margin-top: 255px;  }
+.visual .mid .txtBox {position: absolute; top : 1450px; left: 180px; z-index: 100;}
+.visual .mid .txtBox p {font-size: 48px; font-weight: 400;}
+.visual .mid .txtBox a {font-size: 36px; font-weight: 500; margin-top: 50px; display: block;}
+.visual .mid .txtBox a img {margin-left: 20px;}
+.visual .mid .night {display: block; width: 1524px; height: 1222px; margin: 0 auto; position: relative;}
+.visual .mid ul {display: flex; justify-content: space-between; width: 66%; margin: 0 auto; font-size: 36px; margin-top: 55px;}
+
+.visual .bottom table {width: 80%; border: 1px solid #fff; border-collapse: collapse; text-align: center; margin: 0 auto; font-size: 24px; line-height: 2; margin-top: 160px;}
+.visual .bottom th, .visual .bottom td {border: 1px solid #fff; padding: 20px; }
+.visual .bottom ul {text-align: left; margin-left: 50px; font-weight: 100;}
+.visual .bottom ul li:before {content: '•'; font-size: 108%; padding-right: 5px; }
+
+.visual .warning {font-size: 16px; font-weight: 100; text-align: left; width: 80%; margin: 125px auto 154px; line-height: 2.5;}
+.visual .warning ul li:before {content: '•'; font-size: 108%; padding-right: 5px;}
+
+/* footer */
+footer {background: #000; width: 100%; height: 400px; padding: 100px;}
+footer .wrap {width: 1600px; margin:0 auto; color: #fff;  font-size: 20px; background: #000;}
+footer ul {display: flex; justify-content: space-between; margin-bottom: 95px;}
+footer p {line-height: 30px; color:#9B9B9B}

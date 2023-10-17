@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* fonts */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+@font-face {
+    font-family: 'Broadcast_Matter';
+    src: url('../fonts/Broadcast_Matter.ttf') format('truetype');
+}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box; cursor: url(../img/cursor.png) 2 2, auto;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {margin:0; padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline:none;}
+a:focus {outline:none}
+img {vertical-align: middle;}
+
+/* layout */
+body {font-family: 'Manrope', sans-serif; font-size: 20px; background: #161515; color: #fff;}
+.wrap {width: 100%; margin: 0 auto; overflow: hidden;}
+.en {font-family: 'NanumSquareAc', sans-serif;}
+.en2 {font-family: 'Broadcast_Matter';}
+
+/* section.header */
+.header {width: 100%;}
+.header .top {font-size: 20px; font-weight: 400; display: flex; justify-content: space-between; padding: 50px 60px 0;}
+.header ul li:nth-child(3) {position: relative;}
+.header ul li:nth-child(3) span {position: absolute; top:0; left:0; display: none;}
+
+
+.header ul li:nth-child(2):hover  {color: #b1dd40;}
+.header ul li:nth-child(1):hover  {color: #b1dd40;}
+.header ul li:nth-child(3):hover span  {display: block;}
+
+/* section.topBox */
+.topBox {width: 95%; margin: 0 auto; margin-top: 110px;}
+.topBox ul {display: flex; justify-content: space-between; margin-top: 110px;}
+.topBox ul li:nth-child(1) {font-size: 40px;}
+.topBox ul li:nth-child(2) {font-size: 64px;}
+.topBox ul li:nth-child(3) {font-size: 32px; line-height: 131%;}
+.topBox button {color: #fff; font-family: Playfair Display; font-size: 40px; font-style: normal;font-weight: 400; line-height: normal; margin-top: 50px; margin-left: 850px;}
+
+.topBox button:hover {color: #b1dd40;}
+
+/* section.scdBox */
+.scdBox {width: 95%; margin: 0 auto; margin-top: 110px; margin-bottom: 110px;}
+.scdBox ul {display: flex; justify-content: space-between; margin-top: 70px;}
+
+/* section.rdBox */
+.rdBox {width: 70%; margin: 0 auto; margin-top: 200px;}
+.rdBox .color {display: flex; justify-content: space-between; width: 100%;}
+.rdBox .color .details {margin-left: 90px;}
+.rdBox .color .details li:nth-child(1) {font-size: 64px; margin-bottom: 50px;}
+.rdBox .color .details li:nth-child(2) {font-size: 32px;}
+
+/* section.thBox */
+.thBox {width: 70%; margin: 0 auto; margin-top: 200px;}
+.thBox .typo {display: flex; justify-content: space-between; width: 100%;}
+.thBox .typo .details {transform: translateX(-25px);}
+.thBox .typo .details li:nth-child(1) {font-size: 64px; margin-bottom: 50px;}
+.thBox .typo .details li:nth-child(2) {font-size: 32px;}
+.thBox .typo .details li:nth-child(3) {font-size: 32px;}
+
+/* section.bottomBox */
+.bottomBox {width: 95%; margin: 0 auto; margin-top: 200px; margin-bottom: 110px;}
+.bottomBox ul {display: flex; justify-content: space-between; margin-bottom: 70px;}
+
+/* menuOpen.gnb */
+.gnb {position: absolute; top: -100%; display: block; background: #000; width: 100vw; box-sizing: border-box; transition: all 0.8s; text-align: center; padding: 50px; color: #666; z-index: 3; }
+.gnb .close {font-size: 25px; color: #fff; display: block; font-weight: 100;}
+.gnb ul {margin-top: 30px;}
+.gnb ul li a {display: block; font-size: 40px; font-weight: bold; line-height: 1.7;}
+.gnb ul li:hover {color: #fff;}
+
+.gnb.on {top: 0; transition:all 0.8s; }

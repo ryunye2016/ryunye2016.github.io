@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* fonts */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+@font-face {
+    font-family: 'Broadcast_Matter';
+    src: url('../fonts/Broadcast_Matter.ttf') format('truetype');
+}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box; cursor: url(../img/cursor.png) 2 2, auto;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline:none;}
+a:focus {outline:none}
+img {vertical-align: middle;}
+
+/* layout */
+body {font-family: 'Manrope', sans-serif; font-size: 20px; background: #161515; color: #fff;}
+.wrap {width: 100%; margin: 0 auto; overflow: hidden;}
+.en {font-family: 'NanumSquareAc', sans-serif;}
+.en2 {font-family: 'Broadcast_Matter';}
+
+/* section.header */
+.header {width: 100%;}
+.header .top {font-size: 20px; font-weight: 400; display: flex; justify-content: space-between; padding: 50px 60px 0;}
+.header ul li:nth-child(3) {position: relative;}
+.header ul li:nth-child(3) span {position: absolute; top:0; left:0; display: none;}
+
+
+.header ul li:nth-child(2):hover  {color: #b1dd40;}
+.header ul li:nth-child(1):hover  {color: #b1dd40;}
+.header ul li:nth-child(3):hover span  {display: block;}
+
+/* section.about */
+.about p {text-align: center;}
+.about p.txt {font-weight: 100; margin-bottom: 105px; margin-top: 140px; font-size: 32px;}
+.about p.tit {font-size: 200px; font-weight: 900; line-height: 80.5%; width: 40%; margin: 0 auto;}
+.about p.img {position: relative; top: -5px; z-index: -1; overflow: hidden; width: 610px; margin: 0 auto;}
+
+.about p.tit:hover {color: #b1dd40;}
+
+/* splitting animation */
+.splitting.motion .char {
+    display: inline-block;
+    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--char-index));
+}
+
+@keyframes slide-up {
+    0% {opacity: 0; transform: translateY(50px);}
+    80% {opacity: 0; transform: translateY(50px);}
+}
+
+
+.about p.tit.motion .char {
+    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--char-index));
+}
+
+/* 이미지 애니 */
+@keyframes imgAni {
+    0% {transform: translateY(50px); }
+}
+
+@keyframes imgAni2 {
+    0% {}
+}
+
+@keyframes mask {
+    0% {height: 90%;}
+}
+
+.about p.img.motion {position: relative; animation-name: imgAni2; animation-duration: 1s;}
+.about p.img.motion:after {content: ''; width: 100%; height: 0; background: #b1dd40; position: absolute; top: 0; left: 0; animation-name: mask; animation-duration: 1.2s; }
+
+
+/* section.skills */
+.skills {position:relative;}
+.skills .list {width: 100%; display: flex; justify-content: space-between; padding: 0 280px; margin-top: 240px;}
+.skills ul li {font-size: 32px; line-height: 90px;}
+.skills ul li b {font-size: 48px;}
+.skills ul li:nth-child(1, 6) {margin-bottom: 40px;}
+.skills ul.left li span {margin-left: 40px;}
+.skills ul.right li:nth-child(6) {margin-top: 40px;}
+.skills .line {border-left : 1px solid #ffffff; height : 620px; position:absolute; bottom: 40px; left: 1120px;}
+
+/* 텍스트 애니1 */
+@keyframes textAni {
+    0% {opacity:0;}
+    30% {opacity:0; transform: translate3d(0,40px,0) skewY(8deg); transform-origin : top left}
+}
+
+.skills ul.left.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+.skills ul.right.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+
+
+/* section.quotes */
+.quotes {width: 100%; height: 100vh; text-align: center; line-height: 114.648%; letter-spacing: 5.25px; font-size: 150px; margin-top: 395px;}
+
+/* 텍스트 애니2 */
+@keyframes textAni2 {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+}
+
+.quotes .animate.motion .char {
+    animation: textAni2 2s both;
+    animation-delay: calc(0.08s * var(--char-index));
+}
+
+
+/* section.profile */
+.profile {text-align: center; position: relative; width: 1029px; margin: 0 auto;}
+.profile .tit {text-align: left; font-size: 150px;font-weight: 800; line-height: 100.648%; text-shadow: -1px 0px rgb(0, 0, 0), 0px 1px rgb(0, 0, 0), 1px 0px rgb(0, 0, 0), 0px -1px rgb(0, 0, 0); position: absolute; left:-200px; top :-213px;  z-index: 1;}
+.profile .txt {text-align: left; font-size: 20px; font-style: normal; font-weight: 400; line-height: 190.523%; display: flex; justify-content: center; margin-top: 40px;}
+.profile p.img {display: block;}
+.profile .image {position: relative;}
+.profile .image .img2 {position: absolute; top: 0; left: 0; display: none;}
+
+.profile .image:hover .img2 {display: block;}
+
+
+/* section.edu */
+.edu {position:relative;  margin-bottom: 240px;}
+.edu .list {width: 100%; display: flex; justify-content: space-between; padding: 0 280px; margin-top: 240px;}
+.edu ul li {font-size: 24px; line-height: 60px;}
+.edu ul li b {font-size: 48px;}
+.edu ul li:nth-child(1) {margin-bottom: 40px;}
+.edu ul li:nth-child(3) {margin-bottom: 40px;}
+.edu ul.left li span {margin-left: 40px;}
+.edu ul.right {transform: translate(40px, 0);}
+.edu ul.right li:nth-child(3) {margin-top: 40px;}
+.edu .line {border-left : 1px solid #ffffff; height : 425px; position:absolute; bottom: 10px; left: 1120px;}
+
+/* 텍스트 애니 */
+@keyframes textAni {
+    0% {opacity:0;}
+    30% {opacity:0; transform: translate3d(0,40px,0) skewY(8deg); transform-origin : top left}
+}
+
+.edu ul.left.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+.edu ul.right.motion {display: block; animation-name: textAni; animation-duration: 1.3s; transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+
+
+
+/* section.ncs */
+.ncs {position:relative;}
+.ncs p.tit {font-size: 48px; font-weight: 800; margin-top: 130px; margin-bottom: 140px; transform: translateX(240px);}
+.ncs ul {display: flex; justify-content: space-between; text-align: center; margin: 0 250px; font-size: 24px; font-weight: 600;}
+.ncs ul.center {margin: 150px 250px;}
+.ncs ul.bottom {margin-right: 1100px; margin-bottom: 250px;}
+.ncs p.img {position: absolute; top: 120px; left: 190px; z-index: -1;}
+
+.ncs ul li:hover {color: #b1dd40;}
+
+/* section.contact */
+.contact {width: 100%; padding: 0 65px; }
+.contact ul.cont1 {display: flex; justify-content: space-between;}
+.contact ul.cont1 .txt {font-family: 'Pretendard'; font-weight: 800; font-size: 96px;}
+.contact ul.cont2 {width: 300px; display: flex; justify-content: space-between; position: relative; bottom: 130px;}
+
+.contact ul li:nth-child(1):hover {color: #b1dd40;}
+
+.contact a.top {color: #fff; display: block; text-align: right; margin-bottom: 20px;}
+
+/* menuOpen.gnb */
+.gnb {position: absolute; top: -100%; display: block; background: #000; width: 100vw; box-sizing: border-box; transition: all 0.8s; text-align: center; padding: 50px; color: #666; z-index: 3; }
+.gnb .close {font-size: 25px; color: #fff; display: block; font-weight: 100;}
+.gnb ul {margin-top: 30px;}
+.gnb ul li a {display: block; font-size: 40px; font-weight: bold; line-height: 1.7;}
+.gnb ul li:hover {color: #fff;}
+
+.gnb.on {top: 0; transition:all 0.8s; }
